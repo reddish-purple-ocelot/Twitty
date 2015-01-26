@@ -1,8 +1,9 @@
-<%= form_tag posts_new_path, method: :post do  %>
-<label>
-	<input type="text" name="twitty">
-	<input type="submit">
-</label>
+<%= form_tag posts_new_path, method: :post, class: "form-horizontal" do %>
+<div class="form-group">
+  <label for="twtty" >Write your twitty and be happy:</label>
+   <input id="twtty" type="text" class="form-control" name="twitty">
+   <input type="submit" class="btn btn-primary pull-right" value="Twitty">
+</div>
 <%end%>
 
 <% @posts.each do |post| %>

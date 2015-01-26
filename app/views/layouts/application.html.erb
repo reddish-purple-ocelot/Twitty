@@ -7,16 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= link_to "Main page", root_path %>
 
-	<% if current_user %>
-		<%= link_to "My Posts", posts_user_posts_path %>
-		<%= link_to "Logout", destroy_user_session_path, method: :delete  %>
-		<% else %>
-		<%= link_to "Login", new_user_session_path %>
-		<% end %>
+  <ul class="nav nav-tabs">
+    <li role="presentation">
+  <%= link_to "Main page", root_path %>
+    </li>
 
-<%= yield %>
+    <% if current_user %>
+    <li role="presentation">
+    <%= link_to "My Posts", posts_user_posts_path %>
+    </li>
+    <li role="presentation" class="pull-right">
+    <%= link_to "Logout", destroy_user_session_path, method: :delete  %>
+    </li>
+    <% else %>
+    <li role="presentation">
+    <%= link_to "Login", new_user_session_path %>
+    </li>
+    <% end %>
+  </ul>
+
+  <section role="main">
+    <%= yield %>
+  </section>
 
 </body>
 </html>

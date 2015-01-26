@@ -33,10 +33,11 @@ gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem "twitter-bootstrap-rails"
+
 group :development, :test do
 	gem 'pry'
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
-  gem 'debugger'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'

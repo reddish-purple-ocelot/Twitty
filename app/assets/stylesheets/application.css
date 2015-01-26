@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+
+section[role="main"] {
+  width: 60%;
+  min-width: 500px;
+  max-width: 960px;
+  box-shadow: 0 0 3px #888;
+  margin: 0 auto;
+
+  margin-top: 10px;
+  padding: 20px 30px;
+}
+input[type="submit"]{
+  margin-right: 60px;
+  margin-top:  20px;
+}
+p{
+  padding: 10px 40px;
+  text-align: center;
+}
+li[role="presentation"]{
+  margin-left: 40px;
+  margin-right:20px;
+}
+label{
+  padding-bottom: 15px;
+  padding-left:  10px;
+}
