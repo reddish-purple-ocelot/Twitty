@@ -34,6 +34,7 @@ gem 'devise'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+	gem 'pry'
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
   gem 'debugger'
 

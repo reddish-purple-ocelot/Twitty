@@ -1,0 +1,10 @@
+<%= form_tag posts_new_path, method: :post do  %>
+<label>
+	<input type="text" name="twitty">
+	<input type="submit">
+</label>
+<%end%>
+
+<% @posts.each do |post| %>
+	<p><%= post.text %></p>
+<%end%>

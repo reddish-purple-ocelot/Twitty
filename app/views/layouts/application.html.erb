@@ -7,6 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<%= link_to "Main page", root_path %>
+
+	<% if current_user %>
+		<%= link_to "My Posts", posts_user_posts_path %>
+		<%= link_to "Logout", destroy_user_session_path, method: :delete  %>
+		<% else %>
+		<%= link_to "Login", new_user_session_path %>
+		<% end %>
 
 <%= yield %>
 
