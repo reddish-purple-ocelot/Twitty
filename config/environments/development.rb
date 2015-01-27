@@ -1,3 +1,5 @@
+Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -35,6 +37,14 @@ Rails.application.configure do
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
+
+  config.action_mailer.delivery_method = :mailgun
+  credencials = YAML::load(File.open(Rails.root.join('config/mailer.yml')))
+
+  config.action_mailer.mailgun_settings = {
+    api_key: credencials[:api_key],
+    domain: credencials[:domain]
+  }
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true

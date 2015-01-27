@@ -34,6 +34,7 @@ gem 'devise'
 # gem 'capistrano-rails', group: :development
 
 gem "twitter-bootstrap-rails"
+gem 'mailgun_rails'
 
 group :development, :test do
 	gem 'pry'

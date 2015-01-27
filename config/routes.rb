@@ -7,6 +7,7 @@ Rails.application.routes.draw do
    root 'posts#show_all'
    post 'posts/new' => 'posts#create'
    get 'posts/user_posts' => 'posts#users_all'
+   delete 'posts/:id/delete' => 'posts#delete', as: 'delete_post'
    
   #     post 'toggle'
   #   end

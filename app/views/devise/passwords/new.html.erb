@@ -1,16 +1,30 @@
-<h2>Forgot your password?</h2>
+<div class="row">
+  <div class="col-md-10">
+    <h2>Forgot your password?</h2>
+  </div>
+  <div class="col-md-2">
+    <%= link_to "Log in", new_session_path(resource_name) %>
+ 
+    <%= link_to "Sign up", new_registration_path(resource_name) %>
+  </div>
+</div>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }, class: "form-group") do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <p role="name">
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true, class: "form-control" %>
+    </p>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+  <div class="row">
+    <div class="col-md-5">
+    </div>
+    <div class="actions col-md-7">
+      <%= f.submit "Send me reset password instructions", class: "btn btn-primary" %>
+    </div>
   </div>
+  
 <% end %>
 
-<%= render "devise/shared/links" %>
